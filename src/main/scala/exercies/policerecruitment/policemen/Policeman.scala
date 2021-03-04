@@ -14,7 +14,7 @@ abstract class Policeman {
 
 object Policeman {
   // Creates concrete Policeman based on Person's experience and how smart he is
-  def recruit(unit: Person): Policeman =  {
+  def apply(unit: Person): Policeman =  {
     if(unit.exp < 1.0) {
       new Patrol(unit.name)
     } else if(unit.smart) {
