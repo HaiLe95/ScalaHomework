@@ -1,5 +1,7 @@
 package exercies.policerecruitment
 
+import exercies.policerecruitment.policemen.Policeman
+
 
 class RecruitDepartment {
 
@@ -7,12 +9,10 @@ class RecruitDepartment {
   def checkHonest(people: List[Person]) : List[Person] = {
     people.filter(_.honest)
   }
-  // TODO  !FINISH THIS METHOD!
-  // Here we recruit our candidates (it have to return a List[Policeman] but it don't)
-//  def recruit(people: List[Person]): Unit  = {
-//
-////    people.map(x => if()
-//
-//  }
+
+//   Here we recruit our candidates and it works! YAY
+  def recruit(people: List[Person]): List[Policeman]  = {
+    people.map(x => Policeman.apply(x))
+  }
 
 }
