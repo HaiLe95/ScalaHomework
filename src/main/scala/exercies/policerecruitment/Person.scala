@@ -6,4 +6,6 @@ class Person(val name: String,
              val smart: Boolean,
              val honest: Boolean) {
 
+  override def toString: String = name
+
 }
