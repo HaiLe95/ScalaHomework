@@ -3,7 +3,7 @@
 - Police Recruiting Department: 
     -
 
-Application that create a policeman based on person experience, how he's smart and is he honest.
+Application that applies a policeman based on person experience, how he's smart and is he honest.
 
 
     
