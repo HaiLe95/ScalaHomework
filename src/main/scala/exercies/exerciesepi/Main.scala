@@ -1,5 +1,6 @@
 package exercies.exerciesepi
 
+import scala.collection.immutable.HashMap
 import scala.util.Random
 
 object Main {
@@ -36,29 +37,24 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
-
-    val rnd = Random
-
     // An anarchist way:
 //    if(rnd.nextFloat() < 2) {
 //      println(Math.PI)
 //    }
 
-    var innAmount = 0f
-    var allAmount = 0f
+  println(getPiValue(20000))
+  }
 
-    //
-    for (i <- 0 to 10000000) {
-      allAmount = i
-      val x = rnd.nextFloat()
-      val y = rnd.nextFloat()
-      if (Math.pow(x, 2) + Math.pow(y, 2) < 1) {
-        innAmount += 1
-      }
-    }
+  def getPiValue(accuracy: Int) = {
+    val rnd = Random
 
-    val res = 4 * innAmount / allAmount
-    println(res)
+    val matching = LazyList.fill(accuracy)(
+      Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1 match {
+        case true => 1
+        case _ => 0
+      }).sum
+
+    4 * matching.toFloat / accuracy.toFloat
   }
 
 }
