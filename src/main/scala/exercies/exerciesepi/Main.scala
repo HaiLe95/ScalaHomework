@@ -42,19 +42,22 @@ object Main {
 //      println(Math.PI)
 //    }
 
-  println(getPiValue(20000))
+    println(getPiValue(10000))
+
   }
 
   def getPiValue(accuracy: Int) = {
     val rnd = Random
 
     val matching = LazyList.fill(accuracy)(
-      Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1 match {
-        case true => 1
-        case _ => 0
-      }).sum
+      if(Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1)
+        1
+      else
+        0
+    ).sum
 
     4 * matching.toFloat / accuracy.toFloat
   }
+
 
 }
