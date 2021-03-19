@@ -8,4 +8,3 @@ class OperativeOfficer(val name: String,
   override def department: String = "D03 Operative Department"
 
 }
-

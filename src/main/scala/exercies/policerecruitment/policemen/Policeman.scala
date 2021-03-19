@@ -9,7 +9,7 @@ abstract class Policeman {
   def weapon:       String
 
   override def toString: String =
-    department + ": " + getClass.getName + ". " + name + "."
+    department + ": " + name
 }
 
 object Policeman {
@@ -19,7 +19,8 @@ object Policeman {
       new Patrol(unit.name)
     } else if(unit.smart) {
       new Detective(unit.name,"Ford")
-    } else
+    } else {
       new OperativeOfficer(unit.name,"alpha")
+    }
   }
 }

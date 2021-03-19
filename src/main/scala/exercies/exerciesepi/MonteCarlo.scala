@@ -1,12 +1,10 @@
 package exercies.exerciesepi
 
-import scala.collection.immutable.HashMap
 import scala.util.Random
 
-object Main {
+class MonteCarlo {
 
-
-  // TODO Find a Pi value using Random that generates num from 0 to 1
+  // Find a Pi value using Random that generates num from 0 to 1
 
   /* Okay first thing first.
             How we can get Pi value?
@@ -35,29 +33,15 @@ object Main {
             It's better to spam a large amount of dots for more relevant result.
   */
 
-  def main(args: Array[String]): Unit = {
-
-    // An anarchist way:
-//    if(rnd.nextFloat() < 2) {
-//      println(Math.PI)
-//    }
-
-    println(getPiValue(10000))
-
-  }
-
-  def getPiValue(accuracy: Int) = {
+  def getPiValue(accuracy: Int): Float = {
     val rnd = Random
-
     val matching = LazyList.fill(accuracy)(
-      if(Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1)
+      if(Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1) {
         1
-      else
+      } else {
         0
+      }
     ).sum
-
     4 * matching.toFloat / accuracy.toFloat
   }
-
-
 }
