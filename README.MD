@@ -1,4 +1,4 @@
-#Placeholder for Scala Exercises
+# Placeholder for Scala Exercises
 
 ### Police Recruiting Department: 
 
