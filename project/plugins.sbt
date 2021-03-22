@@ -7,7 +7,8 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 //Usage: terminal =>
 //                  sbt package
 //                  sbt assembly
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")
+
 
 //scala linter: scalafix
 //Usage: ???
