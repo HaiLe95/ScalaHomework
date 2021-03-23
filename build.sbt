@@ -7,9 +7,9 @@ scalaVersion := "2.13.5"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8"
 
 // sbt assembly configs:
-test            in assembly := {}
-mainClass       in assembly := Some("src/main/scala/Main.scala")
 assemblyJarName in assembly := "ScalaHomework.jar"
+mainClass in assembly       := Some("Main")
+
 
 //hairyfotr-linter configs:
 //scalacOptions += "-P:linter:printWarningNames:false"

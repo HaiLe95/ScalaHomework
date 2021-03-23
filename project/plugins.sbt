@@ -10,6 +10,7 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")
 
 //scala linter: hairyfotr-linter
-//Usage: built.sbt => scalaOptions
+//Usage: built.sbt => scalaOptions...
 resolvers += Resolver.sonatypeRepo("snapshots")
 addCompilerPlugin("org.psywerx.hairyfotr" %% "linter" % "0.1-SNAPSHOT")
+

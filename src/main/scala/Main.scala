@@ -1,4 +1,4 @@
 object Main extends App {
   // Some code....
-  println("Hello world")
+  println("Hello world brrrr")
 }
