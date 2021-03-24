@@ -34,8 +34,8 @@ class MonteCarlo {
   */
 
   def getPiValue(accuracy: Int): Float = {
-    val rnd = Random
-    val matching = LazyList.fill(accuracy)(
+    val rnd       = Random
+    val matching  = LazyList.fill(accuracy)(
       if(Math.pow(rnd.nextFloat(), 2) + Math.pow(rnd.nextFloat(), 2) < 1) {
         1
       } else {
