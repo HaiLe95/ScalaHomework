@@ -26,6 +26,6 @@ object Main extends App {
   if(5 < destiny) {
     logger.error("Kenobi: You were the chosen one!")
   } else {
-    logger.error("* Anakin wins *")
+    logger.error("* Anakin  wins *")
   }
 }
